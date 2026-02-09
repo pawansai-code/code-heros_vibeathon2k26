@@ -4,6 +4,7 @@ import { Flame, Siren, Ambulance, CheckCircle2, AlertTriangle, BadgeAlert } from
 import ReportForm from './ReportForm';
 import StatusStepper from './StatusStepper';
 import ImmediateActionModal from './ImmediateActionModal';
+import { analyzeReport } from '../services/gemini';
 
 const EmergencySystem = () => {
     const [statusStep, setStatusStep] = useState(0); // 0: Idle/Request Received
