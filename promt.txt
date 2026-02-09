@@ -74,4 +74,4 @@ now i need the multilingual option with a language button with the language opti
 3. hindi
 4. telugu"
 
-use gooogle translate for dor developing this option in the current developing project 
+use gooogle translate for dor developing this option in the current developing project
