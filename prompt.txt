@@ -1,1 +1,67 @@
 made initial plan
+
+#first prompt
+
+Hey cat act as an expert fullstack developer. 
+as i need to make a web application for the given scenario below 
+
+so in the below scenario, the importance goes first to the usage of AI  but its secondary and the UI need to be more user friendly , interactive and efficient.
+
+In real-world emergency situations such as accidents, fires, or medical crises, people often panic and are unsure which emergency service to contact—Police, Ambulance, Fire Station, or a combination of these. This confusion can cause delays in critical response time.
+
+Your Challenge we need to tackle :
+
+Design and develop an AI-powered web application that enables the public to report emergencies quickly, accurately, and efficiently.
+
+Core Objective:
+
+the website should be like where users in emergency situations can:
+
+- Submit a detailed text description of the incident  
+- Upload supporting images or videos as proof  
+- Provide essential information about the situation  
+
+Functional Requirements
+
+Your application must:
+
+1. Accept user inputs in the form of:
+   - Text descriptions  
+   - Image uploads  
+   - Video uploads  
+
+2. Use AI to automatically:
+   - Analyze the input  
+   - Classify the emergency into one or more categories:
+     - Police  
+     - Ambulance  
+     - Fire Station  
+
+3. Determine and display the severity level of the incident such as:
+   - Low  
+   - Medium  
+   - High  
+   - Critical  
+
+4. Generate a clear, structured, and well-tuned message for the relevant emergency team(s)
+
+5. Forward the AI-generated message instantly to the appropriate department(s)
+
+6. Ensure that every AI-generated message includes a timestamp
+
+This status should be visible to the user so they can track the progress of their emergency request.
+
+Expected Deliverables
+
+- A functional AI-powered website  
+- Emergency type classification  
+- Severity detection  
+- Automated alert generation  
+- Team status tracking system  
+- Proper handling of multimedia inputs
+
+
+requirements so i need to make a react js + vite based web app and with redux library for faster state management 
+
+nnote: do develop these above task step by step with proper planing and structure with readable , reusable and structured codebases
+
