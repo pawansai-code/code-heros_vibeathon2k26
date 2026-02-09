@@ -27,24 +27,23 @@ const EmergencySystem = () => {
         setReportData(data);
         setStatusStep(1); // Start Tracking
 
-        // TODO: AI Analysis Call Here
-        // Mocking AI response for UI dev
-        setTimeout(() => {
-            // Mock result
-            const mockResult = {
-                classification: ["Fire", "Medical"],
-                severity: "High",
-                immediateActions: "Stay low to the ground. Check for breathing."
-            };
-            setAiAnalysis(mockResult);
+        // AI Analysis Call
+        try {
+            const result = await analyzeReport(data.text, data.file);
+            setAiAnalysis(result);
             setShowDispatchToast(true);
             setStatusStep(2); // Dispatch Sent
 
-            // Show modal if needed
-            if (mockResult.classification.includes("Medical") || mockResult.severity === "Critical" || mockResult.severity === "High") {
-                setShowActionModal(true);
+            // Show modal for critical info
+            if (result.classification.includes("Medical") || result.severity === "Critical" || result.severity === "High") {
+                setTimeout(() => setShowActionModal(true), 500);
             }
-        }, 2000);
+        } catch (error) {
+            console.error("AI Analysis failed", error);
+            // Fallback for demo if API fails
+            setStatusStep(2);
+            setShowDispatchToast(true);
+        }
 
         // Hide toast after 3s
         setTimeout(() => setShowDispatchToast(false), 5000);
