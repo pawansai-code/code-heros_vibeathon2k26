@@ -1,11 +1,8 @@
 import React from 'react';
+import EmergencySystem from './components/EmergencySystem';
 
 function App() {
-    return (
-        <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
-            <h1 className="text-3xl font-bold text-red-500">Emergency System Loading...</h1>
-        </div>
-    );
+    return <EmergencySystem />;
 }
 
 export default App;
